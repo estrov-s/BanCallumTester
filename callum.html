@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Download Page</title>
+    <style>
+        :root{
+            --color-odd: #e91e63; /* pink */
+            --color-even: #2196f3; /* blue */
+            --banner-bg: #fff9e6;
+        }
+
+        html, body {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Banner styles */
+        .banner {
+            width: 100%;
+            box-sizing: border-box;
+            background: linear-gradient(90deg, var(--banner-bg), #fff);
+            padding: 18px 10px;
+            border-bottom: 2px solid rgba(0,0,0,0.06);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        /* Container for the letter-by-letter text */
+        .banner .letters {
+            display: inline-block;
+            line-height: 1;
+            white-space: nowrap;
+            letter-spacing: 2px;
+        }
+        .banner .letter {
+            font-family: "Comic Sans MS", "Comic Sans", cursive;
+            font-size: clamp(36px, 6vw, 96px); /* large and responsive */
+            font-weight: 900;
+            display: inline-block;
+            margin: 0 2px;
+            text-transform: none;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        .banner .letter:nth-child(odd) {
+            color: var(--color-odd);
+        }
+        .banner .letter:nth-child(even) {
+            color: var(--color-even);
+        }
+
+        /* Visually-hidden text for screen readers */
+        .sr-only {
+            position: absolute !important;
+            height: 1px; width: 1px;
+            overflow: hidden;
+            clip: rect(1px, 1px, 1px, 1px);
+            white-space: nowrap; /* added line */
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ccc;
+            margin-bottom: 20px;
+        }
+        .download-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 15px;
+        }
+        .download-btn:hover {
+            background-color: #0056b3;
+        }
+
+        main {
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="banner" role="banner" aria-label="placeholder banner">
+        <div class="letters" aria-hidden="true">
+            <span class="letter">p</span>
+            <span class="letter">l</span>
+            <span class="letter">a</span>
+            <span class="letter">c</span>
+            <span class="letter">e</span>
+            <span class="letter">h</span>
+            <span class="letter">o</span>
+            <span class="letter">l</span>
+            <span class="letter">d</span>
+            <span class="letter">e</span>
+            <span class="letter">r</span>
+        </div>
+        <!-- Accessible plain text for screen readers -->
+        <span class="sr-only">CIARAN DALTON HAS SHUT DOWN THE GOVERNMENT</span>
+    </header>
+
+    <main>
+        <img src="images/ciaran.png" alt="Ciaran Dalton ban" width="500">
+        <p>
+            WE are banning Ciaran Dalton 😭🙏 ON GAWD...
+	        I js be seein a minor inconvenience and BLAM...
+	        CIARAN BANNED !!!
+        </p>
+        <img src="images/messag.png" alt="Ciaran Dalton ban message" width="200">
+        <p>
+            evidence
+        </p>
+        <a href="images/ciaran.png" download="ciaran.png" class="download-btn">
+            Download Image
+        </a>
+    </main>
+
+</body>
+</html>
